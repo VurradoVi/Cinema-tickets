@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кино билеты</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="container">
+            <header class="header">
+                <img src="img/img.webp" alt="img">
+                <div class="header__left">
+                    <span>Кино Боевик Драма Военный История 18+</span>
+                    <h1>Министерство неджентльменских дел</h1>
+                    <h3>Дерзкая экшен-комедия Гая Ричи о команде авантюристов, сражающихся с нацистами</h3>
+                    <button id="scroll-button" class="header__btn">Купить билеты</button>
+                </div>
+
+                <div class="header__right">
+                    <span class="header__right-rating">7.3</span>
+                    <span>Рейтинг Кинопоиска</span>
+                    <div class="header__right-btn">
+                        <button id="openTrailer" class="trailer">Смотреть трейлер</button>
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="modal modal-bg" id="trailer-modal">
+        <h2>Министерство неджентльменских дел</h2>
+        <button id="closeTrailer" class="close_btn">x</button>
+        <div class="modal__box">
+            <video id="video" controls>
+                <source src="img/trailer.mp4">
+                Ваш браузер не поддерживает video.
+            </video>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="about">
+            <h2 class="about__h2">О фильме</h2>
+            <div class="about__description">
+                1942 год, Великобритания. Они — лучшие из лучших. Отпетые авантюристы и первоклассные спецы,
+                привыкшие действовать в одиночку.
+                Но когда на кону стоит судьба всего мира, им приходится объединиться в сверхсекретное
+                боевое подразделение и отправиться на выполнение дерзкой миссии против нацистов.
+                Теперь их дело — война, и вести они её будут совершенно не по-джентльменски.
+            </div>
+            <div class="about__photo">
+                <img src="img/1.jpg" alt="photo">
+                <img src="img/2.jpg" alt="photo">
+                <img src="img/3.jpg" alt="photo">
+                <img src="img/4.jpg" alt="photo">
+            </div>
+        </div>
+
+        <div class="schedule">
+            <h2 class="schedule__h2">Расписание</h2>
+
+            <div class="schedule__block">
+                <div class="schedule__block-left">
+                    <h3 id="h3" class="schedule__block-h3">Синема Парк Галерея Чижова</h3>
+                    <div class="address">ул. Кольцовская, 35, ТРЦ «Галерея Чижова», 5 этаж</div>
+                </div>
+
+                <div class="schedule__block-right" id="sec1">
+                    <span>2D</span>
+                    <div class="schedule__btn">
+                        <button class="primarybtn">17:50</button>
+                        <button class="primarybtn">18:30</button>
+                        <button class="primarybtn">19:00</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule__block">
+                <div class="schedule__block-left">
+                    <h3 class="schedule__block-h3">Star & Mlad Град</h3>
+                    <div class="address">ул. Парковая, 3, сити-парк «Град»</div>
+                </div>
+
+                <div class="schedule__block-right">
+                    <span>2D</span>
+                    <div class="schedule__btn">
+                        <button class="primarybtn">17:50</button>
+                        <button class="primarybtn">18:30</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule__block">
+                <div class="schedule__block-left">
+                    <h3 class="schedule__block-h3">Юность</h3>
+                    <div class="address">ул. Комиссаржевской, 7</div>
+                </div>
+
+                <div class="schedule__block-right">
+                    <span>2D</span>
+                    <div class="schedule__btn">
+                        <button class="primarybtn">15:50</button>
+                        <button class="primarybtn">18:30</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <script src="script.js"></script>
+</body>
+
+</html>
