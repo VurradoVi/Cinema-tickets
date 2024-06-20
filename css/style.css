@@ -380,13 +380,30 @@ a {
   margin-bottom: 9px;
 }
 
+.place-info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 450px;
+}
+.place-info .infoBtn {
+  position: absolute;
+}
+.place-info span {
+  padding: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
 .place-grid {
   position: relative;
   display: grid;
   margin-top: 15px;
   grid-template-columns: repeat(14, 1fr);
   justify-items: center;
-  grid-column-gap: 8px;
+  grid-column-gap: 10px;
   grid-row-gap: 9px;
 }
 .place-grid .place-site {
@@ -395,7 +412,7 @@ a {
 }
 .place-grid p {
   color: transparent;
-  background-color: blue;
+  background-color: rgb(105, 105, 253);
   width: 17px;
   height: 17px;
   line-height: 17px;

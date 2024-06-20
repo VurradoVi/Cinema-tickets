@@ -393,6 +393,7 @@ a {
 }
 
 .place {
+    
     margin: 20px 15px;
     display: flex;
     align-items: flex-start;
@@ -403,6 +404,24 @@ a {
             margin-bottom: 9px;
         }
     }
+    
+}
+
+.place-info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 450px;
+    .infoBtn {
+        position: absolute;
+    }
+    span {
+        padding: 10px;
+        border: 0.5px solid rgba(0, 0, 0, .3);
+    }
 }
 
 .place-grid {
@@ -411,7 +430,7 @@ a {
     margin-top: 15px;
     grid-template-columns: repeat(14, 1fr);
     justify-items: center;
-    grid-column-gap: 8px;
+    grid-column-gap: 10px;
     grid-row-gap: 9px;
     .place-site {
         font-size: 8px;
@@ -420,7 +439,7 @@ a {
     }
     p {
         color: transparent;
-        background-color: blue;
+        background-color: rgb(105, 105, 253);
         width: 17px;
         height: 17px;
         line-height: 17px;
@@ -432,5 +451,6 @@ a {
             transform: scale(1.5);
             transition: transform .1s;
         }
+        
     }
 }

@@ -6,6 +6,7 @@ const blocks = document.querySelectorAll('.schedule__block')
 const primarybtn = document.querySelectorAll('.primarybtn')
 const closeSchedule = document.getElementById('closeSchedule')
 const place = document.getElementById('place-grid')
+let clickCount = 0;
 
 btnScroll.addEventListener('click', function (event) {
     event.preventDefault()
@@ -49,6 +50,8 @@ primarybtn.forEach((primarybtn) => {
 closeSchedule.addEventListener('click', function () {
     document.getElementById('schedule-modal').classList.remove('open')
     place.innerHTML = ''
+    document.getElementById('place-info').innerHTML = ''
+    clickCount = 0
 })
 
 openTrailer.addEventListener('click', function () {
@@ -69,11 +72,37 @@ window.addEventListener('keydown', function (event) {
 });
 
 function site() {
-    for (let i = 1; i < 141; i++) {
-        let paragraph = document.createElement('p')
-        paragraph.classList.add('place-site')
-        paragraph.textContent = `${i}`;
-        place.appendChild(paragraph)
-        
+
+    for (let i = 1; i < 11; i++) {
+        for (let j = 1; j <= 14; j++) {
+            let paragraph = document.createElement('p')
+            paragraph.classList.add('place-site')
+            paragraph.textContent = `${j}`;
+            paragraph.addEventListener('click', function () {
+                    this.style.backgroundColor = 'white'
+                    this.style.color = 'black'
+                    this.style.border = '1px solid blue'
+                    this.style.transform = 'scale(1.3)'
+                    this.style.lineHeight = '15px'
+                    let spanElement = document.createElement('span');
+                    let infoElement = document.getElementById('place-info');
+                    spanElement.textContent = `${i} ряд, ${j} место`
+                    infoElement.appendChild(spanElement);
+                //  else {
+                //     this.style.backgroundColor = ''
+                //     this.style.color = ''
+                //     this.style.border = ''
+                //     this.style.transform = ''
+                //     this.style.lineHeight = ''
+                //     infoElement.removeChild(spanElement);
+                //     clickCount = 0
+                // }
+            })
+            place.appendChild(paragraph)
+            if (j === 10 || j === 11) {
+                paragraph.style.visibility = 'hidden'
+            }
+        }
     }
 }
+
