@@ -41,7 +41,7 @@ a {
         justify-content: space-between;
         align-items: flex-end;
         gap: 30px;
-
+        margin: 0 30px;
         img {
             margin-top: 120px;
             border-radius: 10px;
@@ -194,6 +194,37 @@ a {
         grid-auto-flow: column;
     }
 }
+
+
+.description {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 15px;
+    max-width: 970px;
+    padding: 10px;
+
+    .desc-1 {
+        font-size: 16px;
+        line-height: 18px;
+        color: rgba(0, 0, 0, .5);
+    }
+
+    .desc-2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    a {
+        color: #3677c2;
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+
+
+
 
 .schedule {
     margin-top: 100px;
@@ -383,6 +414,7 @@ a {
     transform: scale(0);
     transition: transform .8s;
     text-align: center;
+
     h2 {
         font-size: 18px;
         font-weight: normal;
@@ -393,16 +425,17 @@ a {
         font-size: 27px;
         font-weight: bold;
         line-height: 34px;
-        
+
     }
 
     .schedule-modal__box-h4 {
-        
+
         font-weight: normal;
         line-height: 34px;
         margin-bottom: 30px;
         font-size: 21px;
-        border-bottom: 1px solid rgba(0, 0, 0, .3);;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+        ;
     }
 
     .schedule-line {
@@ -510,6 +543,7 @@ a {
     align-items: center;
     gap: 7px;
     margin-top: 10px;
+
     .forward-btn {
         font-size: 15px;
         font-weight: 600;
@@ -522,6 +556,11 @@ a {
         border: none;
         cursor: pointer;
         text-align: center;
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
     }
 }
 

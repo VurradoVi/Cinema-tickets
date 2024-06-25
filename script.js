@@ -6,6 +6,7 @@ const blocks = document.querySelectorAll('.schedule__block')
 const primarybtn = document.querySelectorAll('.primarybtn')
 const closeSchedule = document.getElementById('closeSchedule')
 const place = document.getElementById('place-grid')
+const forwardBtn = document.getElementById('forward-btn')
 
 
 btnScroll.addEventListener('click', function (event) {
@@ -41,6 +42,7 @@ primarybtn.forEach((primarybtn) => {
         // Вывод текста кнопки и заголовка <h3> and h2
         document.getElementById('schedule-h3').innerHTML = `${h3Text}`
         document.getElementById('schedule-h4').innerHTML = `Сегодня в ${btnText}`
+        document.getElementById('price').innerHTML = ``
         site()
     });
 });
@@ -82,6 +84,7 @@ function site() {
             paragraph.dataset.row = i;
             paragraph.dataset.seat = j;
             paragraph.addEventListener('click', function () {
+                forwardBtn.removeAttribute('disabled')
                 let infoElement = document.getElementById('place-info');
                 if (!this.classList.contains('selected')) {
                     count++
@@ -106,7 +109,7 @@ function site() {
                         paragraph.classList.remove('selected');
                         infoElement.removeChild(spanElement);
                         count--
-                        document.getElementById('price').innerHTML = `${count} билет(а): ${total*count}р`
+                        document.getElementById('price').innerHTML = `${count} билет(а): ${total * count}р`
                     })
                     spanElement.appendChild(x) //кнопка чтобы убрать билет
                 } else {
@@ -118,9 +121,9 @@ function site() {
                     this.classList.remove('selected');
                     infoElement.removeChild(infoElement.lastChild);
                     count--
-                    document.getElementById('price').innerHTML = `${count} билет(а): ${total*count}р`
+                    document.getElementById('price').innerHTML = `${count} билет(а): ${total * count}р`
                 }
-                document.getElementById('price').innerHTML = `${count} билет(а): ${total*count}р`
+                document.getElementById('price').innerHTML = `${count} билет(а): ${total * count}р`
             });
             place.appendChild(paragraph)
             if (j === 10 || j === 11) {

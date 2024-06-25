@@ -39,6 +39,7 @@ a {
   justify-content: space-between;
   align-items: flex-end;
   gap: 30px;
+  margin: 0 30px;
 }
 .container header img {
   margin-top: 120px;
@@ -167,6 +168,30 @@ a {
   grid-template-columns: repeat(4, 255px);
   gap: 25px;
   grid-auto-flow: column;
+}
+
+.description {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 15px;
+  max-width: 970px;
+  padding: 10px;
+}
+.description .desc-1 {
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.description .desc-2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.description a {
+  color: #3677c2;
+}
+.description a:hover {
+  color: red;
 }
 
 .schedule {
@@ -462,6 +487,10 @@ a {
   border: none;
   cursor: pointer;
   text-align: center;
+}
+.place-forward .forward-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .footer {
