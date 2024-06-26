@@ -53,7 +53,7 @@ a {
   letter-spacing: 0.2px;
   line-height: 20px;
 }
-.container header .header__left h1 {
+.container header .header__left .header__h1 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -144,7 +144,7 @@ a {
   color: rgba(0, 0, 0, 0.8);
   line-height: 24px;
   font-size: 16px;
-  width: 620px;
+  max-width: 620px;
   margin-top: 20px;
 }
 .about img {
@@ -165,9 +165,8 @@ a {
 }
 .about .about__photo {
   display: grid;
-  grid-template-columns: repeat(4, 255px);
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
   gap: 25px;
-  grid-auto-flow: column;
 }
 
 .description {
@@ -232,6 +231,7 @@ a {
 }
 .schedule__block .schedule__block-right .schedule__btn {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
   gap: 7px;
 }
@@ -443,8 +443,9 @@ a {
   margin-top: 15px;
   grid-template-columns: repeat(14, 1fr);
   justify-items: center;
-  grid-column-gap: 10px;
-  grid-row-gap: 9px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 9px;
 }
 .place-grid .place-site {
   font-size: 8px;
@@ -503,4 +504,81 @@ a {
   align-items: center;
   margin-bottom: 20px;
   opacity: 0.6;
+}
+
+@media screen and (max-width: 1100px) {
+  .bg-img {
+    background-position: center;
+  }
+  .header img {
+    display: none;
+  }
+  .container .header {
+    flex-wrap: wrap;
+  }
+  .container .header .header__left {
+    margin-top: 50px;
+  }
+  .container .header .header__left .header__h1 {
+    font-size: 40px;
+  }
+  .container .header .header__left h3 {
+    font-size: 23px;
+  }
+  .about {
+    margin: 50px 50px;
+  }
+  .about__photo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 13px;
+  }
+  .container .header {
+    gap: 15px;
+  }
+  .container .header .header__left .header__h1 {
+    font-size: 32px;
+  }
+  .container .header .header__left h3 {
+    font-size: 15px;
+  }
+  .container .header .header__left .header__btn {
+    margin-top: 10px;
+  }
+  .container .header .header__right-rating {
+    font-size: 30px;
+  }
+  .modal {
+    align-items: start;
+  }
+  .modal h2 {
+    margin: 0;
+    padding-top: 45px;
+    font-size: 27px;
+  }
+  .modal video {
+    width: 345px;
+    height: 290px;
+  }
+  .schedule-modal__box {
+    padding: 5px 2px;
+    margin: 0;
+  }
+  .schedule-modal__box .schedule-modal__box-h3 {
+    font-size: 19px;
+  }
+  .schedule-line {
+    width: 80px;
+  }
+  .place {
+    gap: 5px;
+  }
+  .place-grid {
+    -moz-column-gap: 6px;
+         column-gap: 6px;
+    row-gap: 7px;
+  }
 }/*# sourceMappingURL=style.css.map */
